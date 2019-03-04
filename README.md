@@ -27,4 +27,4 @@ vuetify是一个基于Material Design的VUE组件库，整体架构高大上，�
 #### 4. 默认样式如下图所示：
 ![image](https://github.com/cyyssly/vuetify-confirm-dialog/blob/master/confirm.JPG)
 
-当然，你也可以在Confirm.vue中随意修改样式
+这里用到了font awesome的图标，需要在入口index.html中添加引用才能正确显示。当然，你也可以在Confirm.vue中随意修改成自己喜欢的样式。
