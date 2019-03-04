@@ -4,7 +4,7 @@
 
 vuetify是一个基于Material Design的VUE组件库，整体架构高大上，但具体细节仍有待完善。比如众多组件库都会自带的confirm组件，vuetify就是没有。于是自己动手搭了一个。用户的选择结果会以promise对象的方式返回，以方便进行链式操作。
 
-### 一、前置：vue、vuetify
+### 一、前置 dependencies：vue、vuetify
 
 ### 二、使用方法：
 #### 1. 复制Confirm.vue、Confirm.js到项目目录下，个人建议在src/components/下建一个ConfirmDialog子目录，以下代码以此为例。
