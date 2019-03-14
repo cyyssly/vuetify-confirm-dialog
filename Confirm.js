@@ -11,16 +11,38 @@ let theConfirm = function (text) {
 		})
 		document.body.appendChild(confirmDom.$el) // new一个对象，然后插入body里面
 
-		// 为了使confirm的扩展性更强，这个采用对象的方式传入，所有的字段都可以根据需求自定义
-		// 默认值如下，如果不需要更改，调用时可以传入一个空对象
-		confirmDom.text = text || {
-			title: '提示',
-			msg: '确定要删除吗？',
-			btn: {
-			  ok: '确定',
-			  no: '取消'
+		// 为了使confirm的扩展性更强，自定义元素采用对象的方式传入，所有的字段都可以根据需求重新定义
+		// confirmDom.text结构及默认值如下：
+		confirmDom.text = {
+			title: "提示",
+			type: "warning", // 可选success、info、warning、error
+			msg: "确定要删除吗？",
+			btnyes: {
+				text: "确定",
+				icon: "fa-check",
+				color: "warning",
+				visible: true
+			},
+			btnno: {
+				text: "取消",
+				icon: "fa-times",
+				color: "info",
+				visible: true
 			}
-		  }
+		}
+		// 用传入的值覆盖默认值
+		if (text.title) {
+			confirmDom.text.title = text.title
+		}
+		if (text.type) {
+			confirmDom.text.type = text.type
+		}
+		if (text.msg) {
+			confirmDom.text.msg = text.msg
+		}
+		Object.assign(confirmDom.text.btnyes, text.btnyes)
+		Object.assign(confirmDom.text.btnno, text.btnno)
+		// 根据用户选择返回resolve或reject
 		confirmDom.ok = function () {
 			resolve(true)
 			confirmDom.isShow = false
