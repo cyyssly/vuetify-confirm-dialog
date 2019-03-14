@@ -6,9 +6,9 @@ vuetify是一个基于Material Design的VUE组件库，整体架构高大上，�
 
 ### 一、前置 dependencies：vue、vuetify
 
-### 二、使用方法：
-#### 1. 复制Confirm.vue、Confirm.js到项目目录下，个人建议在src/components/下建一个ConfirmDialog子目录，以下代码以此为例。
-#### 2. 在main.js中添加引用：
+### 二、使用方法：Instructions: 
+#### 1. 复制 Confirm.vue、Confirm.js 到项目目录下，个人建议在 src/components/ 下建一个 ConfirmDialog 子目录，以下代码以此为例。Copy Confirm.vue, Confirm.js to the project directory, personally recommend creating a 'ConfirmDialog' subdirectory under src/components/. The following code uses this as an example.
+#### 2. 在 main.js 中添加引用：Add a reference in 'main.js': 
     import ConfirmDialog from './components/ConfirmDialog/Confirm.js'
     Vue.prototype.$confirm = ConfirmDialog
 #### 3. 调用：
