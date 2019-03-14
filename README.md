@@ -36,7 +36,7 @@ vuetify是一个基于Material Design的VUE组件库，整体架构高大上，�
 您不必每次调用都提供全部选项，上例为默认值，您只需提供与默认值不同的选项即可，例如定制一个没有“取消”按钮的确认框：
 You don't have to provide all the options for each call. The above example is the default. You only need to provide an option different from the default value, such as customizing a confirmation box without the "Cancel" button: 
 
-  this.$confirm({ type: success, btnyes: { color: 'success' }, btnno: { visible: false } })
+  this.$confirm({ type: success, msg: '操作成功！', btnyes: { color: 'success' }, btnno: { visible: false } })
 
 #### 4. 默认样式如下图所示：The default style is shown below: 
 ![image](https://github.com/cyyssly/vuetify-confirm-dialog/blob/master/confirm.JPG)
