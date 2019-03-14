@@ -14,16 +14,27 @@ vuetify是一个基于Material Design的VUE组件库，整体架构高大上，�
 #### 3. 调用：
     this.$confirm({
       title: '提示',
+      type: 'warning', // success, info, warning or error
       msg: '确定要删除吗？',
-      btn: {
-        ok: '确定',
-        no: '取消'
-      }
+      btnyes: {
+		text: '确定',
+		icon: 'fa-check',
+		color: 'warning', 
+		visible: true
+	  },
+	  btnno: {
+		text: '取消',
+		icon: 'fa-times',
+		color: 'info',
+		visible: true
+	  }
     }).then(() => {
       console.log('yes')
     }).catch(() => {
       console.log('no')
     })
+您不必每次调用都提供全部选项，上例为默认值，您只需提供与默认值不同的选项即可，例如：
+this.$confirm({ type: success, btnyes: { color: 'success' }, btnno: { visible: false } })
 #### 4. 默认样式如下图所示：
 ![image](https://github.com/cyyssly/vuetify-confirm-dialog/blob/master/confirm.JPG)
 
