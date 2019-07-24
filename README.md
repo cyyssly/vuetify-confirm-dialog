@@ -1,12 +1,13 @@
 # vuetify-confirm-dialog
 
-## a confirm dialog base on vuetify 一个基于vuetify的confirm组件
+## 一个基于vuetify的confirm组件
+## a confirm dialog base on vuetify
 
 vuetify是一个基于Material Design的VUE组件库，整体架构高大上，但具体细节仍有待完善。比如众多组件库都会自带的confirm组件，vuetify就是没有。于是自己动手搭了一个。用户的选择结果会以promise对象的方式返回，以方便进行链式操作。
 
-### 一、前置 dependencies：vue、vuetify
+### 一、前置/dependencies：vue、vuetify
 
-### 二、使用方法：Instructions: 
+### 二、使用方法/Instructions: 
 #### 1. 复制 Confirm.vue、Confirm.js 到项目目录下，个人建议在 src/components/ 下建一个 ConfirmDialog 子目录，以下代码以此为例。Copy Confirm.vue, Confirm.js to the project directory, personally recommend creating a 'ConfirmDialog' subdirectory under src/components/. The following code uses this as an example.
 #### 2. 在 main.js 中添加引用：Add a reference in 'main.js': 
     import ConfirmDialog from './components/ConfirmDialog/Confirm.js'
