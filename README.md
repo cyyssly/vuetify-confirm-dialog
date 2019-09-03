@@ -14,39 +14,40 @@ vuetify是一个基于Material Design的VUE组件库，整体架构高大上，�
     Vue.prototype.$confirm = ConfirmDialog
 #### 3. 调用：
 ```js
-    this.$confirm({
-        title: '提示',
-        type: 'warning', // success, info, warning or error
-        msg: '确定要删除吗？',
-        btnyes: {
-	    text: '确定',
-	    icon: 'fa-check',
-	    color: 'warning', 
-	    visible: true
-	},
-	btnno: {
-	    text: '取消',
-	    icon: 'fa-times',
-	    color: 'info',
-	    visible: true
-	}
-    }).then(() => {
-    	console.log('yes')
-    }).catch(() => {
-    	console.log('no')
-    })
+this.$confirm({
+    title: '提示',
+    type: 'warning', // success, info, warning or error
+    msg: '确定要删除吗？',
+    btnyes: {
+	text: '确定',
+	icon: 'fa-check',
+	color: 'warning', 
+	visible: true
+    },
+    btnno: {
+	text: '取消',
+	icon: 'fa-times',
+	color: 'info',
+	visible: true
+    }
+}).then(() => {
+    console.log('yes')
+}).catch(() => {
+    console.log('no')
+})
 ```
 或者使用同步方式调用：  
 Or use synchronous mode to call:  
 ```js
-    try {
-        await this.$confirm({
-          type: "warning",
-          msg: '确定要开启无门槛会员吗？开启后当前所有非会员客户都将自动改为会员，该操作无法撤消！'
-        })
-    } catch (err) {
-        return false
-    }
+try {
+    await this.$confirm({
+        type: "warning",
+        msg: '确定要开启无门槛会员吗？开启后当前所有非会员客户都将自动改为会员，该操作无法撤消！'
+    })
+} catch (err) {
+    return false
+}
+other codes after confirmed...
 ```
 您不必每次调用都提供全部选项，上例为默认值，您只需提供与默认值不同的选项即可，例如定制一个没有“取消”按钮的确认框：
 You don't have to provide all the options for each call. The above example is the default. You only need to provide an option different from the default value, such as customizing a confirmation box without the "Cancel" button: 
