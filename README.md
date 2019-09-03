@@ -1,7 +1,6 @@
 # vuetify-confirm-dialog
 
-## 一个基于 vuetify 的 confirm 组件
-## a confirm dialog base on vuetify
+## 一个基于 vuetify 的 confirm 组件 / a confirm dialog base on vuetify
 
 vuetify 是一个基于 Material Design 的 VUE 组件库，整体架构高大上，但具体细节仍有待完善。比如众多组件库都会自带的 confirm 组件，vuetify 就是没有。于是自己动手搭了一个。用户的选择结果会以 promise 对象的方式返回，以方便进行链式操作。
 
