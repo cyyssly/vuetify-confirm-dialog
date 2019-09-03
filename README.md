@@ -53,9 +53,11 @@ try {
 other codes after confirmed...
 ```
 您不必每次调用都提供全部选项，上文第一个调用示例为默认值，您只需提供与默认值不同的选项即可，例如定制一个没有“取消”按钮的确认框：  
-You don't have to provide all the options for each call. The first call example above is the default. You only need to provide an option different from the default value, such as customizing a confirmation box without the "Cancel" button: 
+You don't need to provide all the options every time. The first call example above is the default. You only need to provide an option different from the default value, such as customizing a confirmation box without the "Cancel" button: 
 
-  this.$confirm({ type: success, msg: '操作成功！', btnyes: { color: 'success' }, btnno: { visible: false } })
+```js
+this.$confirm({ type: success, msg: '操作成功！', btnyes: { color: 'success' }, btnno: { visible: false } })
+```
 
 #### 4. 默认样式如下图所示 / The default style is shown below: 
 ![image](https://github.com/cyyssly/vuetify-confirm-dialog/blob/master/confirm.JPG)
