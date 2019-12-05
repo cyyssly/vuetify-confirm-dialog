@@ -34,7 +34,7 @@ this.$confirm({
 	visible: true
     }
 }).then(() => {
-    console.log('yes')
+    ...anything you want to do
 }).catch(() => {
     console.log('no')
 })
@@ -57,6 +57,13 @@ You don't need to provide all the options every time. The first call example abo
 
 ```js
 this.$confirm({ type: success, msg: '操作成功！', btnyes: { color: 'success' }, btnno: { visible: false } })
+```
+
+完全使用默认选项则只需要传入一个空对象： 
+To use the default option completely, you only need to pass in an empty object:
+
+```js
+this.$confirm({}).then(()=>{})
 ```
 
 #### 4. 默认样式如下图所示 / The default style is shown below: 
